@@ -4,5 +4,7 @@
         <file>Resources/img/qipan.jpg</file>
         <file>Resources/img/right.jpg</file>
         <file>Resources/img/stitchResult.jpg</file>
+        <file>Resources/img/.gitignore</file>
+        <file>Resources/img/GOPR0058.MP4</file>
     </qresource>
 </RCC>

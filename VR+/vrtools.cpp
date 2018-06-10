@@ -20,7 +20,7 @@ namespace vr
 			cout<< "第" << i + 1 << "张..." << endl;
 			string;
 			std::stringstream filename;
-			filename << "img/" + path + "/img" << i + 1 << ".jpg";
+			filename << "Resources/img/" + path + "/img" << i + 1 << ".jpg";
 			cv::Mat image = imread(filename.str());
 			/* 提取角点 */
 			Mat imageGray;
@@ -42,7 +42,7 @@ namespace vr
 					circle(imageTemp, corners[j], 10, Scalar(0, 0, 255), 2, 8, 0);
 				}
 				std::stringstream filename;
-				filename << "img/" + path + "/" << i + 1 << "_corner.jpg";
+				filename << "Resources/img/" + path + "/" << i + 1 << "_corner.jpg";
 				imwrite(filename.str(), imageTemp);
 				cout << "保存第" << i + 1 << "张角点图片...完成" << endl;
 
@@ -157,7 +157,7 @@ namespace vr
 			fisheye::undistortImage(distort_img, undistort_img, intrinsic_matrix, distortion_coeffs, new_intrinsic_mat);
 
 			std::stringstream filename;
-			filename << "img/" + path + "/" << i + 1 << "_d.jpg";
+			filename << "Resources/img/" + path + "/" << i + 1 << "_d.jpg";
 			imwrite(filename.str(), undistort_img);
 		}
 		cout << "=====保存结束=====" << endl;
@@ -168,7 +168,7 @@ namespace vr
 
 	void vrGetImagesFromVideo() 
 	{
-		VideoCapture video("img/GOPR0058.MP4");
+		VideoCapture video("Resources/img/GOPR0058.MP4");
 		for (int i = 0; i < 12; i++) 
 		{
 			video.set(CAP_PROP_POS_FRAMES, i * 3);
@@ -177,7 +177,7 @@ namespace vr
 			//pyrDown(tmp, tmp);
 			stringstream str;
 			str << i + 1;
-			imwrite("img/" + path + "/img" + str.str() + ".jpg", tmp);
+			imwrite("Resources/img/" + path + "/img" + str.str() + ".jpg", tmp);
 			cout << i + 1 << " done" << endl;
 		}
 	}
@@ -204,7 +204,7 @@ namespace vr
 		Mat newCameraMatrix = Mat(3, 3, CV_32FC1, Scalar::all(0));
 
 
-		VideoCapture video("img/GOPR0058.MP4");
+		VideoCapture video("Resources/img/GOPR0058.MP4");
 		int frame_count = (int)video.get(CAP_PROP_FRAME_COUNT);
 		int sum = 0;
 		vector<Mat> bufImg{ Mat(),Mat(),Mat() };
