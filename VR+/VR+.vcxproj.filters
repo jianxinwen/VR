@@ -5,6 +5,9 @@
     <ClCompile Include="VR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vrtools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resource Files">
@@ -45,5 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="VR+.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vrtools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

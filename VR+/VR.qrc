@@ -1,4 +1,8 @@
 <RCC>
-    <qresource prefix="VR">
+    <qresource prefix="/VR">
+        <file>Resources/img/left.jpg</file>
+        <file>Resources/img/qipan.jpg</file>
+        <file>Resources/img/right.jpg</file>
+        <file>Resources/img/stitchResult.jpg</file>
     </qresource>
 </RCC>
