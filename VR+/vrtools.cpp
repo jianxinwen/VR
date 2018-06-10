@@ -487,8 +487,8 @@ namespace vr
 	*图像拼接
 	**********************************************************/
 	Mat vrStitch() {
-		Mat imgLeft = imread("img/left.jpg", 1);
-		Mat imgRight = imread("img/right.jpg", 1);
+		Mat imgLeft = imread("Resources/img/left.jpg", 1);
+		Mat imgRight = imread("Resources/img/right.jpg", 1);
 
 		pyrDown(imgLeft, imgLeft);
 		pyrDown(imgLeft, imgLeft);
@@ -696,9 +696,9 @@ namespace vr
 					ptrOfResultImg += imgResult.elemSize();
 				}
 			}
-			imwrite("img/stitchResult.jpg", imgResult);
-			namedWindow("stitchResult.jpg", WINDOW_NORMAL);
-			imshow("stitchResult.jpg", imgResult);
+			imwrite("Resources/img/stitchResult.jpg", imgResult);
+			//namedWindow("stitchResult.jpg", WINDOW_NORMAL);
+			//imshow("stitchResult.jpg", imgResult);
 			waitKey(0);
 			return imgResult;
 

@@ -4,4 +4,5 @@ VR::VR(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+	Mat a = vr::vrStitch();
 }
