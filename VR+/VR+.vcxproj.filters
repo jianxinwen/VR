@@ -8,6 +8,9 @@
     <ClCompile Include="vrtools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ImageAndVideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resource Files">
@@ -33,6 +36,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="VR.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageAndVideo.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
